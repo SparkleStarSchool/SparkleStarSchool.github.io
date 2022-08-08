@@ -1,0 +1,49 @@
+
+.navbar{
+    background-color: white;
+}
+.navbar-brand{
+    margin:0 10px;
+}
+.navbar .navbar-brand span{
+    font-weight: 600;
+    font-size: 1em;
+    font-style: italic;
+    color: rgb(79, 5, 152);
+}
+.navbar .nav-item a{
+    color: rgb(79, 5, 152) !important;
+    font-weight: 600;
+    margin: 0 10px;
+}
+.navbar .nav-item a:hover{
+    color: rgb(255, 132, 0) !important;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+.dropdown-item{
+    width: 90%;
+}
+.dropdown-item:hover{
+    background-color: white;
+}
+
+.hero{
+    position:relative;
+    margin: 35px 0 0 0;
+}
+.hero img{
+    opacity: 0.7;
+}
+
+.centered-text{
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5vw;
+    color: rgb(79, 5, 152);
+    font-weight: 500;
+}
