@@ -1,23 +1,25 @@
 $(document).ready( function() {
     $('#course1').on('click',()=>{
-        $img = $(`<img style='width:100%' src="assets/images/StoryOfChinese.jpeg"> `)
-        $('#lightbox').find('.modal-body').append($img)
-        $('#lightbox').modal('show')
+        let path = "assets/images/StoryOfChinese.jpeg"
+        appendImage(path)
     })
     $('#course2').on('click',()=>{
-        $img = $(`<img style='width:100%' src="assets/images/Math.jpeg"> `)
-        $('#lightbox').find('.modal-body').append($img)
-        $('#lightbox').modal('show')
+        let path = "assets/images/Math.jpeg"
+        appendImage(path)
     })
     $('#course3').on('click',()=>{
-        $img = $(`<img style='width:100%' src="assets/images/SaveSoil.jpeg"> `)
-        $('#lightbox').find('.modal-body').append($img)
-        $('#lightbox').modal('show')
+        let path = "assets/images/SaveSoil.jpeg"
+        appendImage(path)
     })
     $('#course4').on('click',()=>{
-        $img = $(`<img style='width:100%' src="assets/images/French.jpeg"> `)
-        $('#lightbox').find('.modal-body').append($img)
-        $('#lightbox').modal('show')
+        let path = "assets/images/French.jpeg"
+        appendImage(path)
     })
-    
 });
+
+const appendImage = (path)=>{
+    $img = $(`<img style='width:100%' src=${path}>`)
+    $('#lightbox').find('.modal-body').empty()
+    $('#lightbox').find('.modal-body').append($img)
+    $('#lightbox').modal('show')
+} 
