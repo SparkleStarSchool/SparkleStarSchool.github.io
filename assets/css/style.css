@@ -1,5 +1,6 @@
 body{
     color:#4c3d81;
+    font-family: "STHeiti";
 }
 p {
     word-wrap:break-word;
@@ -16,6 +17,7 @@ p {
 }
 .navbar-brand #title{
     max-width:180px;
+    padding: 0.5em 0 0 0; 
 }
 .navbar .navbar-brand span{
     font-weight: 600;
@@ -28,22 +30,15 @@ p {
     font-weight: 600;
     /* font-size: 1.1em; */
     margin: 0 10px;
+    transition: font-size 0.5s ease;
 }
 .navbar .nav-item a:hover{
     color: rgb(255, 132, 0) !important;
+    font-size: 1.3em;
 }
 
-.dropdown:hover>.dropdown-menu {
-    display: block;
-  }
-.dropdown-item{
-    width: 90%;
-}
-.dropdown-item:hover{
-    background-color: white;
-}
 #introduction{
-    margin: 7em 0 3em 0;
+    margin: 7em 0 0 0;
 }
 .instruction-content{
     margin-bottom: 2.5em;
@@ -56,18 +51,38 @@ p {
     font-weight: 400;
 }
 .instruction-content button{
+    margin:0 1em 0 0;
     background-color:#4c3d81;
     color:white;
     border: none;
     border-radius:12px;
     padding:10px;
+    position:relative;
+    transition: color 300ms ease-in-out;
+    z-index: 1;
 }
-.instruction-content button:hover{
+.instruction-content button:before{
+    content:'';
     background-color:lightgray;
+    border-radius:12px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    z-index: -1;
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0);
+}
+.instruction-content button:hover:before{
+    transform: scaleX(1);
+}
+.instruction-content button:hover
+{
     color:rgb(255, 132, 0);
 }
 #new-course{
-    margin: 0 0 3em 0;
+    margin: 3em 0 0 0;
 }
 #new-course h3{
     text-align: center;
@@ -87,7 +102,7 @@ p {
     cursor: pointer;
 }
 #learn{
-    margin: 0 0 3em 0;
+    margin: 3em 0 0 0;
     background-color:#4c3d81;
     color:white;
 }
@@ -107,7 +122,7 @@ p {
 }
 #teacher h3{
     text-align: center;
-    margin: 1em 0;
+    margin: 3em 0 1em 0;
     font-size: 2em;
 }
 footer{
@@ -123,8 +138,28 @@ footer #footer-code{
 footer .layout{
     margin: 2em 0;
 }
-footer .col-md-5{
-    display: flex;
-    align-items:flex-end;
-}
 
+footer .copyright{
+    text-align: center;
+    font-size: 1.2em;
+}
+#lightbox input{
+    display: block;
+    margin:1em 0 0.2em 0;
+    width: 100%;
+    border:0.1em solid rgb(255, 132, 0);
+}
+#lightbox .course-btn{
+    background-color:#4c3d81;
+    color:white;
+    border: none;
+    border-radius:5px;
+}
+#lightbox .course-btn:hover,
+#lightbox .course-btn:focus{
+    background-color:lightgray;
+    color:rgb(255, 132, 0);
+}
+#lightbox p{
+    color:rgb(255, 132, 0);
+}
