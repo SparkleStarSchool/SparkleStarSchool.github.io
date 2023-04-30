@@ -1,0 +1,38 @@
+section{
+    margin: 7em 0 0 0;
+}
+.title h3{
+    text-align: center;
+    font-size: 2em;
+}
+.categary{
+    text-align: right;
+    font-size: 1.2em;
+    padding-right: 1em;
+}
+.courses h3{
+    margin: 2em 0;
+}
+.courses img{
+    width: 100%;
+    height: 90%;
+    border-radius: 5px;
+}
+.courses img:hover{
+    box-shadow: 8px 8px 8px rgba(0,0,0,.5); 
+    transform:scale(1.05);
+    cursor: pointer;
+}
+footer{
+    background-color:#4c3d81;
+    color:white;
+}
+footer #footer-logo{
+    max-width:100px;
+}
+footer #footer-code{
+    max-width:90px;
+}
+footer .layout{
+    margin: 2em 0;
+}

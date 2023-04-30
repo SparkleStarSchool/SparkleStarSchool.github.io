@@ -1,0 +1,20 @@
+#lightbox input{
+    display: block;
+    margin:1em 0 0.2em 0;
+    width: 100%;
+    border:0.1em solid rgb(255, 132, 0);
+}
+#lightbox .course-btn{
+    background-color:#4c3d81;
+    color:white;
+    border: none;
+    border-radius:5px;
+}
+#lightbox .course-btn:hover,
+#lightbox .course-btn:focus{
+    background-color:lightgray;
+    color:rgb(255, 132, 0);
+}
+#lightbox p{
+    color:rgb(255, 132, 0);
+}

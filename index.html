@@ -5,69 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sparkle Star</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/images/logo111.png" type="image/x-icon" />
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
-      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/modal.css">
 
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    
   </head>
   <body>
-    <header>
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">
-          <img id='logo' src="assets/images/logo.png" />
-          <img id='title' src="assets/images/title.png" alt="">
-        </a>
-        <button id="collapse-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto navStyle">
-            <li class="nav-item active">
-              <a class="nav-link " href="#">主页</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">关于我们</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">精品课程</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">公益俱乐部<img src="assets/images/free3.png" alt=""></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#teacher">特色教师</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">联系我们</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
     <main>
       <section id="introduction">
         <div class="container">
@@ -78,7 +29,7 @@
                 et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
                 aliquip ex ea commodo consequat. </p>
               <button>精品课程</button>
-              <button>更多信息</button>
+              <button>课表展示</button>
             </div>
             <div class="col-12 col-lg-6">
               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -265,16 +216,6 @@
       <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
               <div class="modal-header">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col">
-                        <button class="course-btn book-course">预约试课</button>
-                        <input type="emal" placeholder="example@mail.com">
-                        <p>请填写有效邮箱点击预约试课</p>
-                        <button class="course-btn">查看课表</button>
-                      </div>
-                    </div>
-                  </div>
                   <button type="button" id= "closeLightbox" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                   </button>
@@ -283,8 +224,10 @@
               </div>
           </div>
       </div>
-  </div>
+    </div>
 
-  <script src="assets/javascript/script.js"></script>
+  <script src="assets/javascript/module/header.js"></script>
+  <script src="assets/javascript/index.js"></script>
+  
   </body>
 </html>

@@ -1,41 +1,4 @@
-body{
-    color:#4c3d81;
-    font-family: "STHeiti";
-}
-p {
-    word-wrap:break-word;
-    word-break: normal;
-}
-.navbar{
-    background-color: white;
-}
-.navbar-brand{
-    margin:0 10px;
-}
-.navbar-brand #logo{
-    max-width:50px;
-}
-.navbar-brand #title{
-    max-width:180px;
-    padding: 0.5em 0 0 0; 
-}
-.navbar .navbar-brand span{
-    font-weight: 600;
-    /* font-size: 1.2em; */
-    font-style: italic;
-    color: #4c3d81;
-}
-.navbar .nav-item a{
-    color:#4c3d81 !important;
-    font-weight: 600;
-    /* font-size: 1.1em; */
-    margin: 0 10px;
-    transition: font-size 0.5s ease;
-}
-.navbar .nav-item a:hover{
-    color: rgb(255, 132, 0) !important;
-    font-size: 1.3em;
-}
+
 
 #introduction{
     margin: 7em 0 0 0;
@@ -108,7 +71,7 @@ p {
 }
 #learn h3{
     text-align: center;
-    margin: 1em 0;
+    margin: 3em 0 1em 0;
     font-size: 2em;
 }
 .learn-content{
@@ -143,23 +106,4 @@ footer .copyright{
     text-align: center;
     font-size: 1.2em;
 }
-#lightbox input{
-    display: block;
-    margin:1em 0 0.2em 0;
-    width: 100%;
-    border:0.1em solid rgb(255, 132, 0);
-}
-#lightbox .course-btn{
-    background-color:#4c3d81;
-    color:white;
-    border: none;
-    border-radius:5px;
-}
-#lightbox .course-btn:hover,
-#lightbox .course-btn:focus{
-    background-color:lightgray;
-    color:rgb(255, 132, 0);
-}
-#lightbox p{
-    color:rgb(255, 132, 0);
-}
+

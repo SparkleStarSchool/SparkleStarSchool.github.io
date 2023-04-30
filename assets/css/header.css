@@ -1,0 +1,38 @@
+body{
+    color:#4c3d81;
+    font-family: "STHeiti";
+}
+p {
+    word-wrap:break-word;
+    word-break: normal;
+}
+.navbar{
+    background-color: white;
+}
+.navbar-brand{
+    margin:0 10px;
+}
+.navbar-brand #logo{
+    max-width:50px;
+}
+.navbar-brand #title{
+    max-width:180px;
+    padding: 0.5em 0 0 0; 
+}
+.navbar .navbar-brand span{
+    font-weight: 600;
+    /* font-size: 1.2em; */
+    font-style: italic;
+    color: #4c3d81;
+}
+.navbar .nav-item a{
+    color:#4c3d81 !important;
+    font-weight: 600;
+    /* font-size: 1.1em; */
+    margin: 0 10px;
+    transition: font-size 0.5s ease;
+}
+.navbar .nav-item a:hover{
+    color: rgb(255, 132, 0) !important;
+    font-size: 1.3em;
+}
