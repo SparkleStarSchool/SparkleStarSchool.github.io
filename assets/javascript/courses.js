@@ -3,8 +3,10 @@ $(document).ready(() => {
     db.ref("subject").get().then((snapshot) => {
         if (snapshot.val() != null) {
             for (let [key, value] of Object.entries(snapshot.val())) {
-                let $option = $(`<option value=${key}>${value.name}</option>`)
-                $('.categary select').append($option)
+                if(value.name!='Club'){
+                    let $option = $(`<option value=${key}>${value.name}</option>`)
+                    $('.categary select').append($option)
+                }
             }
             $('.categary select').on('change', (e)=>{
                 console.log(e.target.value)
@@ -49,16 +51,21 @@ $(document).ready(() => {
                     let subjectID = snapshot.val().subjectID
 
                     tempData['subjectID'] = subjectID
+                    db.ref('subject').child(subjectID).get().then((snapshot)=>{
+                        tempData['subjectName']=snapshot.val().name
+                        // get teacher name from teacher
+                        db.ref('teacher').child(course.teacherID).get().then((snapshot) => {
+                            tempData['teacher'] = snapshot.val().name
 
-                    // get teacher name from teacher
-                    db.ref('teacher').child(course.teacherID).get().then((snapshot) => {
-                        tempData['teacher'] = snapshot.val().name
+                            courseInfor.push(tempData)
 
-                        courseInfor.push(tempData)
-
-                        // append on DOM
-                        appendCourse(tempData)
+                            // append on DOM
+                            if(tempData.subjectName!='Club'){
+                                appendCourse(tempData)
+                            }
+                        })
                     })
+                    
                 })
             }
         }

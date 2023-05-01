@@ -23,7 +23,7 @@ $(document).ready(()=>{
                             <a class="nav-link" href="/courses.html">精品课程</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">公益俱乐部<img src="assets/images/free3.png" alt=""></a>
+                            <a class="nav-link" href="/club.html">公益俱乐部<img src="assets/images/free3.png" alt=""></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/schedule.html">课表展示</a>
