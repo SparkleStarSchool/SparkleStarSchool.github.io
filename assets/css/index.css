@@ -3,15 +3,27 @@
 #introduction{
     margin: 7em 0 0 0;
 }
+
 .instruction-content{
-    margin-bottom: 2.5em;
+    margin: 2.5em 0;
+}
+.instruction-title{
+    display: flex;
+    flex-wrap:wrap;
+    margin-bottom: 1em;
 }
 .instruction-content h4{
-    font-size: 3em;
+    font-size: 2.5em;
+    margin-right: 0.7em;
 }
 .instruction-content p{
-    font-size: 1.2em;
+    font-size: 1.7em;
     font-weight: 400;
+    font-family: Arial;
+    font-style:italic;
+}
+.instruction-btn{
+    margin-top: 1.5em;
 }
 .instruction-content button{
     margin:0 1em 0 0;

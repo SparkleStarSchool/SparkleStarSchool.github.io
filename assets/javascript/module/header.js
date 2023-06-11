@@ -17,22 +17,22 @@ $(document).ready(()=>{
                             <a class="nav-link " href="/index.html">主页</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/index.html#learn">关于我们</a>
+                            <a class="nav-link" href="/index.html#learn">关于启明</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/courses.html">精品课程</a>
+                            <a class="nav-link" href="/courses.html">课程推荐</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/club.html">公益俱乐部<img src="assets/images/free3.png" alt=""></a>
+                            <a class="nav-link" href="/club.html">俱乐部<img src="assets/images/free3.png" alt=""></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/schedule.html">课表展示</a>
+                            <a class="nav-link" href="/schedule.html">课表汇总</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/index.html#teacher">特色教师</a>
+                            <a class="nav-link" href="/index.html#teacher">课堂展示</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/index.html#contact">联系我们</a>
+                            <a class="nav-link" href="/index.html#contact">联系方式</a>
                         </li>
                     </ul>
                 </div>
