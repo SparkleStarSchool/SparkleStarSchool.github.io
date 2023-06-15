@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sparkle Star</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"/>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/images/logo111.png" type="image/x-icon" />
-
-    <link rel="stylesheet" href="assets/css/header.css" />
-    <link rel="stylesheet" href="assets/css/index.css" />
-    <link rel="stylesheet" href="assets/css/modal.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"> -->
+    <link rel="icon" href="img/logo111.png" type="image/x-icon" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/modal.css">
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -25,8 +25,8 @@
           <div class="row hero">
             <div class="col-12 col-lg-5 instruction-content">
               <div class="instruction-title">
-                <h4>启迪智慧</h4>
-                <h4>明秀未来</h4>
+                <h4>启迪智慧<span>空</span>明秀未来</h4>
+                <!-- <h4 class="title2">明秀未来</h4> -->
               </div>
               <p>What you focus on expands</p>
               <div class="instruction-btn"></div>
@@ -42,13 +42,13 @@
                 </ol>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img class="d-block w-100" src="assets/images/books.jpg" alt="First slide">
+                    <img class="d-block w-100" src="img/books.jpg" alt="First slide">
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="assets/images/coding.jpg" alt="Second slide">
+                    <img class="d-block w-100" src="img/coding.jpg" alt="Second slide">
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="assets/images/learning2.jpg" alt="Third slide">
+                    <img class="d-block w-100" src="img/learning2.jpg" alt="Third slide">
                   </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -64,15 +64,20 @@
           </div>
         </div>
       </section>
-      <section id="new-course">
-        <div class="container">
+      <section id="about-us">
+        <div class="container wow fadeInLeft" data-wow-offset="100">
           <div class="row">
             <div class="col">
-              <h3>新课推荐</h3>
+              <h3>关于启明</h3>
             </div>
           </div>
           <div class="row">
-            <div class="col-6 col-md-3 image-layout">
+            <div class="col-1 col-md-2"></div>
+            <div class="col-10 col-md-8">
+              <p>启明双语学校(Sparkle Star Bilingual School)是“全球华校联盟”的创始成员, 加拿大中文教学学会成员, BC 卑诗省中文协会成员。学校主要开设K-6年级中文、1-12年级数学、各级数学竞赛、小初高英文阅读写作、科学、法语、Scratch和Python 编程、国际象棋、京剧等学科课程。学校主办数学竞赛、高中生物、少儿绘画、法语启蒙、多元文化、微电影制作、中文趣味故事等公益俱乐部。</p>
+            </div>
+            <div class="col-1 col-md-2"></div>
+            <!-- <div class="col-6 col-md-3 image-layout">
               <img id='course1' src="assets/images/StoryOfChinese.jpeg" alt="Image for">
             </div>
             <div class="col-6 col-md-3 image-layout">
@@ -83,35 +88,60 @@
             </div>
             <div class="col-6 col-md-3 image-layout">
               <img id='course4' src="assets/images/French.jpeg" alt="Image for">
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
-      <section id="learn">
-        <div class="container">
+      <section id="course">
+        <div class="container wow fadeInUp" data-wow-delay="0.8s" data-wow-offset="100">
           <div class="row">
             <div class="col">
-              <h3>Why learn with us</h3>
+              <h3>课程类别</h3>
             </div>
           </div>
-          <div class="row learn-content">
-            <div class="col-12 col-md-4">
-              <img src="assets/images/icon1.png" alt="">
-              <h4>1. XXXXXXX</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                tempor incididunt ut labore et dolore magna aliqua. </p>
+          <div class="row course-category">
+            <div class="col col-sm-6 col-md-4 col-lg-3 course-layout">
+              <div class="image-layout">
+                <img src="img/chinese.png" alt="">
+                <h4>语文</h4>
+              </div>
             </div>
-            <div class="col-12 col-md-4">
-              <img src="assets/images/icon1.png" alt="">
-              <h4>2. XXXXXXX</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                tempor incididunt ut labore et dolore magna aliqua. </p>
+            <div class="col col-sm-6 col-md-4 col-lg-3 course-layout">
+              <div class="image-layout">
+                <img src="img/language.png" alt="">
+                <h4>英语</h4>
+              </div>
             </div>
-            <div class="col-12 col-md-4">
-              <img src="assets/images/icon1.png" alt="">
-              <h4>3. XXXXXXX</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                tempor incididunt ut labore et dolore magna aliqua. </p>
+            <div class="col col-sm-6 col-md-4 col-lg-3 course-layout">
+              <div class="image-layout">
+                <img src="img/french.png" alt="">
+                <h4>法语</h4>
+              </div>
+            </div>
+            <div class="col col-sm-6 col-md-4 col-lg-3 course-layout">
+              <div class="image-layout">
+                <img src="img/maths.png" alt="">
+                <h4>数学</h4>
+              </div>
+            </div>
+            <div class="col col-sm-6 col-md-4 col-lg-3 course-layout">
+              <div class="image-layout">
+                <img src="img/programming.png" alt="">
+                <h4>编程</h4>
+              </div>
+            </div>
+            <div class="col col-sm-6 col-md-4 col-lg-3 course-layout">
+              <div class="image-layout">
+                <img src="img/science.png" alt="">
+                <h4>科学</h4>
+              </div>
+              
+            </div>
+            <div class="col col-sm-6 col-md-4 col-lg-3 course-layout">
+              <div class="image-layout">
+                <img src="img/chess.png" alt="">
+                <h4>象棋</h4>
+              </div>
             </div>
           </div>
         </div>
@@ -120,73 +150,12 @@
         <div class="container">
           <div class="row">
             <div class="col">
-              <h3>特色教师</h3>
+              <h3>课堂展示</h3>
             </div>
           </div>
-          <div class="row">
-            <div class="col col-md-6">
-              <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                    <img src="assets/images/person.png" class="card-img" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Mike Li</h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col col-md-6">
-              <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                    <img src="assets/images/person.png" class="card-img" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Mike Li</h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col col-md-6">
-              <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                    <img src="assets/images/person.png" class="card-img" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Mike Li</h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col col-md-6">
-              <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                    <img src="assets/images/person.png" class="card-img" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Mike Li</h5>
-                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="row"></div>
+
+          
         </div>
       </section>
     </main>
@@ -194,13 +163,13 @@
         <div class="container">
           <div class="row">
             <div class="col col-md-8 layout">
-              <img id='footer-logo' src="assets/images/footer.jpeg" alt="">
+              <img id='footer-logo' src="img/footer.jpeg" alt="">
             </div>
             <div class="col col-md-4 layout">
               <div class="row">
                 <div class="col">
                   <p>咨询详情</p>
-                  <img id='footer-code' src="assets/images/code.png" alt="">
+                  <img id='footer-code' src="img/code.png" alt="">
                   <p>sparklestar.ca@gmail.com</p>
                 </div>
               </div>
@@ -228,8 +197,12 @@
       </div>
     </div>
 
-  <script src="assets/javascript/module/header.js"></script>
-  <script src="assets/javascript/index.js"></script>
+  <script src="js/module/header.js"></script>
+  <script src="js/index.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script>
+      new WOW().init();
+  </script>
   
   </body>
 </html>

@@ -3,8 +3,8 @@ $(document).ready(()=>{
         `<header>
             <nav class="navbar fixed-top navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="/index.html">
-                    <img id='logo' src="assets/images/logo.png" />
-                    <img id='title' src="assets/images/title.png" alt="">
+                    <img id='logo' src="img/logo.png" />
+                    <img id='title' src="img/title.png" alt="">
                 </a>
                 <button id="collapse-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +23,7 @@ $(document).ready(()=>{
                             <a class="nav-link" href="/courses.html">课程推荐</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/club.html">俱乐部<img src="assets/images/free3.png" alt=""></a>
+                            <a class="nav-link" href="/club.html">俱乐部<img src="img/free3.png" alt=""></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/schedule.html">课表汇总</a>

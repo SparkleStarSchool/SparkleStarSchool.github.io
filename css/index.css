@@ -12,9 +12,25 @@
     flex-wrap:wrap;
     margin-bottom: 1em;
 }
+@keyframes typing {
+    from { width: 0 }
+}
+@keyframes caret {
+    50% { border-right-color: #4c3d81; }
+}
+
 .instruction-content h4{
-    font-size: 2.5em;
+    font-size: 2em;
     margin-right: 0.7em;
+    width:9em;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(9),
+               caret 1s steps(1) 9;
+    border-right: 2px solid transparent;
+}
+.instruction-content span{
+    visibility: hidden;
 }
 .instruction-content p{
     font-size: 1.7em;
@@ -56,14 +72,19 @@
 {
     color:rgb(255, 132, 0);
 }
-#new-course{
-    margin: 3em 0 0 0;
+
+#about-us{
+    margin: 4em 0 0 0;
 }
-#new-course h3{
+#about-us h3{
     text-align: center;
     font-size: 2em;
 }
-#new-course .image-layout{
+#about-us p{
+    font-size: 1.2em;
+}
+
+/* #new-course .image-layout{
      margin: 20px 0;
 }
 #new-course img{
@@ -75,26 +96,65 @@
     box-shadow: 8px 8px 8px rgba(0,0,0,.5); 
     transform:scale(1.05);
     cursor: pointer;
-}
-#learn{
+} */
+#course{
     margin: 3em 0 0 0;
-    background-color:#4c3d81;
+    background-color:#68599b;
     color:white;
 }
-#learn h3{
+#course h3{
     text-align: center;
-    margin: 3em 0 1em 0;
+    margin: 2em 0 1em 0;
     font-size: 2em;
 }
-.learn-content{
-    text-align: center;
+.course-category{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0 4em; */
 }
-.learn-content h4{
+.course-category h4{
+    margin: 0.5em 0;
+    color:#4c3d81;
+}
+
+.course-category .course-layout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+.course-category .image-layout{
+    width: 10em;
+    height: 10em;
+    background-color: white;
+    border-radius: 50%;
     margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.learn-content p{
-    font-size: 1.2em;
+@media(hover:hover){
+    .course-category .image-layout:hover{
+        border: 2px solid #4c3d81;
+        box-shadow: 8px 8px 8px rgba(0,0,0,.5);
+        cursor: pointer;
+    }  
 }
+@media(hover:none){
+    .course-category .image-layout:hover{
+        border: 2px solid #4c3d81;
+        box-shadow: 8px 8px 8px rgba(0,0,0,.5);
+        cursor: pointer;
+    }  
+}
+
+.course-category img{
+    width: 6.5em;
+    height: 6.5em;
+}
+
 #teacher h3{
     text-align: center;
     margin: 3em 0 1em 0;
