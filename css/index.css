@@ -20,7 +20,7 @@
 }
 
 .instruction-content h4{
-    font-size: 2em;
+    font-size: 1.5em;
     margin-right: 0.7em;
     width:9em;
     white-space: nowrap;
@@ -33,7 +33,7 @@
     visibility: hidden;
 }
 .instruction-content p{
-    font-size: 1.7em;
+    font-size: 1.5em;
     font-weight: 400;
     font-family: Arial;
     font-style:italic;
