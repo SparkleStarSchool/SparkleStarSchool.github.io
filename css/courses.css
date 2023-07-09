@@ -10,6 +10,16 @@ section{
     font-size: 1.2em;
     padding-right: 1em;
 }
+select {
+    color:#4c3d81;
+    font-size: 0.95em;
+    border: 1px solid #4c3d81;
+    outline: 1px solid #4c3d81;
+}
+option {
+    color:#4c3d81;
+    font-size: 0.95em;
+}
 .courses h3{
     margin: 2em 0;
 }
