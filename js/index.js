@@ -1,5 +1,5 @@
 $(document).ready( function() {
-    const url = new URL("http://127.0.0.1:5501/courses.html")
+    
     $('#course-btn').on('click',()=>{
       window.location.href='./courses.html'
     })
@@ -52,8 +52,10 @@ $(document).ready( function() {
 
     $('.course-card').each(function(){
       $(this).on('click', ()=>{
+        let temp = 'http://'+window.location.host+'/courses.html'
+        const url = new URL(temp) 
         url.searchParams.append('subject', $(this).data('value'));
-        console.log(url.href)
+        // console.log(url.href)
         window.location.href= url.href
       })
     })

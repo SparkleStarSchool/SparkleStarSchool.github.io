@@ -3,7 +3,7 @@ $(document).ready(()=>{
         `<header>
             <nav class="navbar fixed-top navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="/index.html">
-                    <img id='logo' src="img/logo.jpg" />
+                    <img id='logo' src="./img/logo.jpg" />
                    
                 </a>
                 <button id="collapse-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
