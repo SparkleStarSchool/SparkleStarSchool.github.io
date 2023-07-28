@@ -2,6 +2,16 @@
 .layout{
     margin: 7em 0 0 0;
 }
+.timeZone-layout{
+    display: flex;
+    margin-left: 2em;
+}
+input[type='radio']{
+    margin-left: 0.5em;
+}
+input[type='radio']{
+    accent-color:#4c3d81;
+}
 ul li{
     list-style-position: inside;
 }

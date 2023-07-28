@@ -116,7 +116,7 @@ $(document).ready(() => {
                 let endTime = timeFormat(courseTime.endTime)
                 let tempTime = dayTable[courseTime.day]+' '+startTime+' - '+endTime
                 console.log(tempTime)
-                $($detail.find('h5')[3]).html(`<h5><span>上课时间：</span>${tempTime}</h5>`)
+                $($detail.find('h5')[3]).html(`<h5><span>上课时间(BC时间):</span>${tempTime}</h5>`)
             }else{
                 course.courseTime.forEach(courseTime=>{
                     let startTime = timeFormat(courseTime.startTime)
