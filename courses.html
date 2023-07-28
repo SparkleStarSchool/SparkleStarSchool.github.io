@@ -11,6 +11,7 @@
     <link rel="icon" href="./img/logo111.png" type="image/x-icon" />
 
     <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/modal.css">
     <link rel="stylesheet" href="./css/courses.css" />
 
@@ -22,6 +23,10 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database-compat.js"></script>
     <script src="./js/module/firebase.js"></script>  
+
+    <script src="./js/module/header.js"></script>
+    <script src="./js/module/footer.js"></script>
+    <script type='module' src="./js/courses.js"></script>
     
 </head>
 <body>
@@ -48,29 +53,6 @@
     </section>
     
   </main>
-  <footer id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col col-md-8 layout">
-          <img id='footer-logo' src="./img/footer.jpeg" alt="">
-        </div>
-        <div class="col col-md-4 layout">
-          <div class="row">
-            <div class="col">
-              <p>咨询详情</p>
-              <img id='footer-code' src="./img/code.png" alt="">
-              <p>sparklestar.ca@gmail.com</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col copyright">
-            <p>Copyright@sparklestar</p>
-        </div>
-      </div>
-    </div>
-  </footer>
   <!-- modal -->
   <div class="modal fade" id="lightbox" tabindex="-1" role="dialog" data-backdrop="static">
     <div class="modal-dialog modal-lg" role="document">
@@ -85,7 +67,5 @@
         </div>
     </div>
   </div>
-  <script src="./js/module/header.js"></script>
-  <script src="./js/courses.js"></script>
 </body>
 </html>

@@ -178,23 +178,5 @@
     /* margin: 2em 0 1em 0; */
     font-size: 2em;
 }
-footer{
-    background-color:#4c3d81;
-    color:white;
-}
-footer #footer-logo{
-    max-width:100px;
-}
-footer #footer-code{
-    max-width:90px;
-}
-footer .layout{
-    margin: 2em 0;
-}
 
-footer .copyright{
-    text-align: center;
-    font-size: 1.2em;
-    margin: 2em 0;
-}
 

@@ -1,12 +1,22 @@
+import timeFormat from "./module/timeFormat.js"
 $(document).ready(() => {
     let courseInfor = []
+    // get parameter from url
+    const queryString = window.location.search
+    const urlParams = new URLSearchParams(queryString)
+    const subjectName = urlParams.get('subject')
+    console.log(subjectName)
     db.ref("subject").get().then((snapshot) => {
         if (snapshot.val() != null) {
             for (let [key, value] of Object.entries(snapshot.val())) {
-                if(value.name!='Club'){
+
                     let $option = $(`<option value=${key}>${value.name}</option>`)
                     $('.categary select').append($option)
-                }
+
+                    // select subject from index page
+                    if(subjectName==value.name){
+                        $option.attr('selected','selected');
+                    }
             }
             $('.categary select').on('change', (e)=>{
                 console.log(e.target.value)
@@ -15,6 +25,7 @@ $(document).ready(() => {
                 console.log(courseInfor)
                 console.log(subjectID)
                 if(!subjectID){
+                    $('.courses').empty()
                     // select nothing, append all courses
                     courseInfor.forEach((course)=>{
                         appendCourse(course)
@@ -60,59 +71,74 @@ $(document).ready(() => {
                             courseInfor.push(tempData)
 
                             // append on DOM
-                            if(tempData.subjectName!='Club'){
+                            if(subjectName){
+                                //filter from index page
+                                if(tempData.subjectName == subjectName){
+                                    appendCourse(tempData)
+                                }
+                            }else{
                                 appendCourse(tempData)
                             }
                         })
                     })
-                    
                 })
             }
         }
     })
+
+
+    const appendCourse = (course)=>{
+        let $course = $(`
+            <div class="col-6 col-md-3">
+                <img id=${course.key} src=${course.postImageUrls} alt="Image for">
+            </div>
+        `)
+        
+        $course.on('click', ()=>{
+            let dayTable = { 'Monday': '星期一', 'Tuesday': '星期二', 'Wednesday': '星期三', 'Thursday': '星期四', 'Friday': '星期五', 'Saturday': '星期六', 'Sunday': '星期日' }
+            
+            let $detail = $(`
+                    <div>
+                        <h5><span>课程名称：</span> ${course.name}</h5>
+                        <h5><span>授课教师：</span> ${course.teacher}</h5>
+                        <h5><span>适用年级：</span> ${course.grade}</h5>
+                        <h5><span>上课时间：</span></h5>
+                        <div>
+                        </div>
+                        <h5><span>课程简介：</span></h5>
+                        <h5 style="word-wrap: break-word;">${course.outline}</h5>
+                        <img style='width:100%' src=${course.postImageUrls}>
+                    </div>`)
+            
+            if(course.courseTime.length==1){
+                let courseTime = course.courseTime[0]
+                let startTime = timeFormat(courseTime.startTime)
+                let endTime = timeFormat(courseTime.endTime)
+                let tempTime = dayTable[courseTime.day]+' '+startTime+' - '+endTime
+                console.log(tempTime)
+                $($detail.find('h5')[3]).html(`<h5><span>上课时间：</span>${tempTime}</h5>`)
+            }else{
+                course.courseTime.forEach(courseTime=>{
+                    let startTime = timeFormat(courseTime.startTime)
+                    let endTime = timeFormat(courseTime.endTime)
+                    let $courseTime = $(`<h5>${dayTable[courseTime.day]+' '+startTime+' - '+endTime}</h5>`)
+                    // console.log(dayTable[courseTime.day]+' '+courseTime.startTime+' - '+courseTime.endTime)
+                    $detail.find('div').append($courseTime)
+                })
+            }
+            $detail.find('span').each(function() {
+                $(this).css({
+                    'color': 'rgb(255, 132, 0)'
+                });
+            });
+            $('#lightbox').find('.modal-body').empty()
+            $('#lightbox').find('.modal-body').append($detail)
+            $('#lightbox').modal('show')
+        })
+    
+        $('.courses').append($course)
+    }
 })
 
-const appendCourse = (course)=>{
-    let $course = $(`
-        <div class="col-6 col-md-3">
-            <img id=${course.key} src=${course.postImageUrls} alt="Image for">
-        </div>
-    `)
-    
-    $course.on('click', ()=>{
-        let dayTable = { 'Monday': '星期一', 'Tuesday': '星期二', 'Wednesday': '星期三', 'Thursday': '星期四', 'Friday': '星期五', 'Saturday': '星期六', 'Sunday': '星期日' }
-        $detail = $(`
-                <div>
-                    <h3><span>课程名称：</span> ${course.name}</h3>
-                    <h3><span>授课教师：</span> ${course.teacher}</h3>
-                    <h3><span>适用年级：</span> ${course.grade}</h3>
-                    <h3><span>上课时间：</span></h3>
-                    <div>
-                    </div>
-                    <h3><span>课程简介：</span></h3>
-                    <h3 style="word-wrap: break-word;">${course.outline}</h3>
-                    <img style='width:100%' src=${course.postImageUrls}>
-                </div>`)
-        if(course.courseTime.length==1){
-            let courseTime = course.courseTime[0]
-            let tempTime = dayTable[courseTime.day]+' '+courseTime.startTime+' - '+courseTime.endTime
-            $($detail.find('h3')[3]).html(`<h3><span>上课时间：</span>${tempTime}</h3>`)
-        }else{
-            course.courseTime.forEach(courseTime=>{
-                let $courseTime = $(`<h3>${dayTable[courseTime.day]+' '+courseTime.startTime+' - '+courseTime.endTime}</h3>`)
-                console.log(dayTable[courseTime.day]+' '+courseTime.startTime+' - '+courseTime.endTime)
-                $detail.find('div').append($courseTime)
-            })
-        }
-        $detail.find('span').each(function() {
-            $(this).css({
-                'color': 'rgb(255, 132, 0)'
-            });
-        });
-        $('#lightbox').find('.modal-body').empty()
-        $('#lightbox').find('.modal-body').append($detail)
-        $('#lightbox').modal('show')
-    })
 
-    $('.courses').append($course)
-}
+

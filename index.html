@@ -13,12 +13,21 @@
     <link href="./lib/animate/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/footer.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="./js/module/header.js"></script>
+    <script src="./js/module/footer.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./lib/wow/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+      
   </head>
   <body>
     <main>
@@ -32,8 +41,8 @@
               </div>
               <p>What you focus on expands</p>
               <div class="instruction-btn"></div>
-              <button>课程推荐</button>
-              <button>课表汇总</button>
+              <button id="course-btn">课程推荐</button>
+              <button id="schedule-btn">课表汇总</button>
             </div>
             <div class="col-12 col-lg-7">
               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -76,7 +85,7 @@
           <div class="row">
             <div class="col-1 col-md-2"></div>
             <div class="col-10 col-md-8">
-              <p>启明双语学校(Sparkle Star Bilingual School)是“全球华校联盟”的创始成员, 加拿大中文教学学会成员, BC 卑诗省中文协会成员。学校主要开设K-6年级中文、1-12年级数学、各级数学竞赛、小初高英文阅读写作、科学、法语、Scratch和Python 编程、国际象棋、京剧等学科课程。学校主办数学竞赛、高中生物、少儿绘画、法语启蒙、多元文化、微电影制作、中文趣味故事等公益俱乐部。</p>
+              <p>启明国际教育(Sparkle Star International Education)是“全球华校联盟”的创始成员, 加拿大中文教学学会成员, BC 卑诗省中文协会成员。学校主要开设K-6年级中文、1-12年级数学、各级数学竞赛、小初高英文阅读写作、科学、法语、Scratch和Python 编程、国际象棋等学科课程。学校主办数学竞赛、高中生物、少儿绘画、法语启蒙、多元文化、微电影制作、中文趣味故事等公益俱乐部。</p>
             </div>
             <div class="col-1 col-md-2"></div>
           </div>
@@ -91,11 +100,11 @@
           </div>
           
           <div class="row course-category">
-            <div class="col col-sm-6 col-md-4 col-lg-3 course-layout">
-              <div class="course-card">
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 course-layout">
+              <div class="course-card" data-value="中文">
                   <div class="image-layout">
                     <img src="./img/chinese.png" alt="">
-                    <h4>语文</h4>
+                    <h4>中文</h4>
                   </div>
                   <div class="course-title">
                     <h6>国内同步语文班</h6>
@@ -104,32 +113,8 @@
                   </div>
               </div>
             </div>
-            <div class="col col-sm-6 col-md-4 col-lg-3 course-layout">
-              <div class="course-card">
-                <div class="image-layout">
-                  <img src="./img/language.png" alt="">
-                  <h4>英语</h4>
-                </div>
-                <div class="course-title">
-                  <h6>初级英文阅读写作班</h6>
-                  <h6>中级英文阅读写作班</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col col-sm-6 col-md-4 col-lg-3 course-layout">
-              <div class="course-card">
-                <div class="image-layout">
-                  <img src="./img/french.png" alt="">
-                  <h4>法语</h4>
-                </div>
-                <div class="course-title">
-                  <h6>初级法语班</h6>
-                  <h6>高级法语班</h6>
-                </div>
-              </div>
-            </div>
-            <div class="col col-sm-6 col-md-4 col-lg-3 course-layout">
-              <div class="course-card">
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 course-layout">
+              <div class="course-card" data-value="数学">
                 <div class="image-layout">
                   <img src="./img/maths.png" alt="">
                   <h4>数学</h4>
@@ -139,12 +124,37 @@
                   <h6>基础数学班</h6>
                   <h6>SSAT数学班</h6>
                   <h6>奥数竞赛班</h6>
-                  <h6>滑铁卢数学竞赛班</h6>
+                  <h6>滑铁卢竞赛班</h6>
                 </div>
               </div>
             </div>
-            <div class="col col-sm-6 col-md-4 col-lg-3 course-layout">
-              <div class="course-card">
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 course-layout">
+              <div class="course-card" data-value="英语">
+                <div class="image-layout">
+                  <img src="./img/language.png" alt="">
+                  <h4>英语</h4>
+                </div>
+                <div class="course-title">
+                  <h6>初级阅读写作班</h6>
+                  <h6>中级阅读写作班</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 course-layout">
+              <div class="course-card" data-value="法语">
+                <div class="image-layout">
+                  <img src="./img/french.png" alt="">
+                  <h4>法语</h4>
+                </div>
+                <div class="course-title">
+                  <h6>法语自然拼读班</h6>
+                  <h6>初级法语班</h6>
+                  <h6>高级法语班</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 course-layout">
+              <div class="course-card" data-value="编程">
                 <div class="image-layout">
                   <img src="./img/programming.png" alt="">
                   <h4>编程</h4>
@@ -156,8 +166,8 @@
                 </div>
               </div>
             </div>
-            <div class="col col-sm-6 col-md-4 col-lg-3 course-layout">
-              <div class="course-card">
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 course-layout">
+              <div class="course-card" data-value="科学">
                 <div class="image-layout">
                   <img src="./img/science.png" alt="">
                   <h4>科学</h4>
@@ -169,8 +179,8 @@
                 </div>
               </div>
             </div>
-            <div class="col col-sm-6 col-md-4 col-lg-3 course-layout">
-              <div class="course-card">
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 course-layout">
+              <div class="course-card" data-value="象棋">
                 <div class="image-layout">
                   <img src="./img/chess.png" alt="">
                   <h4>象棋</h4>
@@ -178,6 +188,21 @@
                 <div class="course-title">
                   <h6>中文国际象棋班</h6>
                   <h6>英文国际象棋班</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 course-layout">
+              <div class="course-card" data-value="俱乐部">
+                <div class="image-layout">
+                  <img src="./img/free_club.png" alt="" style="width: 2em;height: 2em;">
+                  <h4>公益俱乐部</h4>
+                </div>
+                <div class="course-title">
+                  <h6>数学竞赛</h6>
+                  <h6>绘画启蒙</h6>
+                  <h6>多元文化</h6>
+                  <h6>生物科学</h6>
+                  <h6>故事会</h6>
                 </div>
               </div>
             </div>
@@ -223,37 +248,5 @@
         </div>
       </section>
     </main>
-    <footer id="contact">
-        <div class="container">
-          <div class="row">
-            <div class="col col-md-8 layout">
-              <img id='footer-logo' src="./img/footer.jpeg" alt="">
-            </div>
-            <div class="col col-md-4 layout">
-              <div class="row">
-                <div class="col">
-                  <p>咨询详情</p>
-                  <img id='footer-code' src="./img/code.png" alt="">
-                  <p>sparklestar.ca@gmail.com</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col copyright">
-                <p>Copyright@sparklestar</p>
-            </div>
-          </div>
-        </div>
-    </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-  <script src="./js/module/header.js"></script>
-  <script src="./js/index.js"></script>
-  <script src="./lib/wow/wow.min.js"></script>
-  <script>
-      new WOW().init();
-  </script>
-  
   </body>
 </html>

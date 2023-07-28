@@ -1,4 +1,11 @@
 $(document).ready( function() {
+    const url = new URL("http://127.0.0.1:5501/courses.html")
+    $('#course-btn').on('click',()=>{
+      window.location.href='./courses.html'
+    })
+    $('#schedule-btn').on('click',()=>{
+      window.location.href='./schedule.html'
+    })
     // slick-carousel
     $('#main-slider').slick({
         slidesToShow: 4,
@@ -42,4 +49,12 @@ $(document).ready( function() {
           }
         ]
       });
+
+    $('.course-card').each(function(){
+      $(this).on('click', ()=>{
+        url.searchParams.append('subject', $(this).data('value'));
+        console.log(url.href)
+        window.location.href= url.href
+      })
+    })
 });
