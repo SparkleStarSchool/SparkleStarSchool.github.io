@@ -4,7 +4,7 @@
 }
 .timeZone-layout{
     display: flex;
-    margin-left: 2em;
+    margin-left: 1.5em;
 }
 input[type='radio']{
     margin-left: 0.5em;
